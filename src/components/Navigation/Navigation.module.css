@@ -1,0 +1,25 @@
+.nav {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.nav-items {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  background-color: yellow;
+}
+
+.nav-options {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 2rem;
+  background-color: green;
+}
+
+.nav-items span {
+  cursor: pointer;
+}
