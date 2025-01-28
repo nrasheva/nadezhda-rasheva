@@ -4,6 +4,21 @@
   padding: 0;
 }
 
+:root {
+  --primary: #121F28; /*  Dark blue */
+  --secondary: #FF715B; /*  Orange */
+  --background: #121F28; /*  Dark blue */
+  --textPrimary: #333333; /*  Dark Gray for text */
+  --textSecondary: #777777; /*  Light Gray for text */
+  --error: #e74c3c; /*  Red for errors */
+  --success: #2ecc71; /*  Green for success messages */
+  --border: #e0e0e0; /*  Border Color */
+}
+
 body {
-  background-color: orange;
+  background-color: var(--background);
+}
+
+html {
+  font-size: 18px;
 }
