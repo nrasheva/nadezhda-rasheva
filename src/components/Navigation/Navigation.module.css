@@ -1,5 +1,5 @@
 .nav {
-  background-color: blue;
+  background-color: var(--background);
   display: flex;
   justify-content: center;
   padding: 1rem 0;
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .nav-options {
@@ -18,7 +18,7 @@
   flex: 1;
   justify-content: flex-end;
   gap: 2rem;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .nav-options ul {
@@ -41,7 +41,7 @@
 }
 
 .logo {
-  background-color: palevioletred;
+  color: white;
   padding: 0 1rem;
 }
 
@@ -68,6 +68,7 @@
     right: -50%;
     top: -7%;
     border-radius: 50%;
+    background-color: var(--secondary);
   }
 
   .nav-options ul {

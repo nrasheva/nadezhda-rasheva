@@ -17,7 +17,7 @@ const closeMenu = <img src={closeIcon} alt="Close menu" className={styles["hambu
 
      return(
       <nav className={styles["nav-items-mobile"]}>
-      <h2 className={styles.logo}>Logo Mobile</h2>
+      <h2 className={styles.logo}>NR</h2>
       {showLinks ? closeMenu : hamburger}
       {showLinks && <NavLinks />}
   </nav>
