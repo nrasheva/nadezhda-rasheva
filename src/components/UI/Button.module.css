@@ -1,0 +1,29 @@
+.button-main {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filled-button {
+  background-color: var(--secondary);
+  border: 3px solid transparent;
+  color: white;
+}
+
+.filled-button:hover {
+  background-color: transparent;
+  border: 3px solid var(--secondary);
+}
+
+.border-button {
+  background-color: transparent;
+  border: 3px solid var(--secondary);
+  color: white;
+}
+
+.border-button:hover {
+  background-color: var(--secondary);
+  border: 3px solid transparent;
+}
