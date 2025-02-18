@@ -8,7 +8,7 @@ export const NavLinks = () =>{
               <a href="/">Home</a>
           </li>
           <li>
-              <a href="/#services">About</a>
+              <a href="/#about">About</a>
           </li>
           <li>
               <a href="/#about">Projects</a>
