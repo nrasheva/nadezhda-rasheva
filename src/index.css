@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", serif;
 }
 
 :root {
   --primary: #121F28; /*  Dark blue */
   --secondary: #FF715B; /*  Orange */
   --background: #121F28; /*  Dark blue */
+  --lighter-primary: #16232C;
   --textPrimary: #333333; /*  Dark Gray for text */
   --textSecondary: #777777; /*  Light Gray for text */
   --error: #e74c3c; /*  Red for errors */
