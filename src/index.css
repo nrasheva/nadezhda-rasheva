@@ -9,9 +9,12 @@
 
 :root {
   --primary: #121F28; /*  Dark blue */
-  --secondary: #FF715B; /*  Orange */
+  --secondary: #ff715b; /*  Orange */
+  --secondary-transparent: rgba(255, 113, 91, 0.5);
+  --light-secondary: #d39187;
   --background: #121F28; /*  Dark blue */
   --lighter-primary: #16232C;
+  --lighter-text: #38424C;
   --textPrimary: #333333; /*  Dark Gray for text */
   --textSecondary: #777777; /*  Light Gray for text */
   --error: #e74c3c; /*  Red for errors */
