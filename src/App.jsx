@@ -2,6 +2,7 @@ import { Navigation } from "./components/Navigation/Navigation";
 import { Home } from "./components/Pages/Home";
 import { About } from "./components/Pages/About";
 import { Projects } from "./components/Pages/Projects";
+import { Contacts } from "./components/Pages/Contacts";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
   <Home />
   <About />
   <Projects />
+  <Contacts />
   </>
 )
 }
