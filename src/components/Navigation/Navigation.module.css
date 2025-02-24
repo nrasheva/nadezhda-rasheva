@@ -2,7 +2,6 @@
   background-color: var(--background);
   display: flex;
   justify-content: center;
-  /* padding: 1rem 0; */
 }
 
 .navScrolled {
@@ -12,7 +11,7 @@
   align-items: center;
   padding: 0.5rem 1rem;
   position: fixed;
-  transition: background-color 0.3s ease-in-out;
+  z-index: 9;
 }
 
 .nav-items-desktop {

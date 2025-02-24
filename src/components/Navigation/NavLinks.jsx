@@ -2,7 +2,7 @@ import styles from "./Navigation.module.css";
 import { useState } from "react";
 
 export const NavLinks = () =>{
-const [activeLink, setActiveLink] = useState('');
+const [activeLink, setActiveLink] = useState('/#home');
 
 const handleClick = (href) => {
     setActiveLink(href);
