@@ -1,22 +1,33 @@
 import styles from "./Navigation.module.css";
+import { useState } from "react";
 
 export const NavLinks = () =>{
+const [activeLink, setActiveLink] = useState('');
+
+const handleClick = (href) => {
+    setActiveLink(href);
+  };
+
   return(
     <div className={styles["nav-options"]}>
       <ul>
-          <li>
-              <a href="/#home">Home</a>
+        {[
+          { name: "Home", href: "/#home" },
+          { name: "About", href: "/#about" },
+          { name: "Projects", href: "/#projects" },
+          { name: "Contacts", href: "/#contact" },
+        ].map((link) => (
+          <li key={link.href}>
+            <a
+              href={link.href}
+              onClick={() => handleClick(link.href)}
+              className={activeLink === link.href ? styles.active : ""}
+            >
+              {link.name}
+            </a>
           </li>
-          <li>
-              <a href="/#about">About</a>
-          </li>
-          <li>
-              <a href="/#about">Projects</a>
-          </li>
-          <li>
-              <a href="/#contact">Contacts</a>
-          </li>
+        ))}
       </ul>
-      </div>
-  )
-}
+    </div>
+  );
+};

@@ -43,6 +43,10 @@
   color: white;
 }
 
+.active {
+  border-bottom: 3px solid var(--secondary);
+}
+
 .nav-items span {
   cursor: pointer;
 }
