@@ -4,6 +4,7 @@
   align-items: center;
   gap: 2rem;
   padding: 100px 50px;
+  border-bottom: 1px solid var(--secondary-transparent);
 }
 
 .projects-title {
