@@ -81,4 +81,8 @@
 
 @media screen and (min-width: 1800px) {}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .card-image img {
+    opacity: 1;
+  }
+}
