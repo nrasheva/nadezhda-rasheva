@@ -7,10 +7,14 @@
   border-top: 1px solid var(--secondary-transparent);
   color: var(--textSecondary);
   font-size: 13px;
+  padding: 0.5rem;
 }
 
 @media screen and (min-width: 1800px) {
 }
 
 @media screen and (max-width: 768px) {
+  .footer-main {
+    text-align: center;
+  }
 }

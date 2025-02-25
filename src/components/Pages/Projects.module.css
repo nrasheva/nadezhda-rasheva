@@ -33,4 +33,10 @@
 @media screen and (min-width: 1800px) {
 }
 
+@media screen and (min-width: 768px) {
+  .projects-content {
+    gap: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {}

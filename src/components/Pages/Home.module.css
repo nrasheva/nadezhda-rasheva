@@ -86,6 +86,13 @@
   color: var(--light-secondary);
 }
 
+
+@media screen and (max-width: 1024px) {
+  .home-content {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .home-main {
     padding: 10px;
