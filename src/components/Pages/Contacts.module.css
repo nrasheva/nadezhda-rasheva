@@ -1,7 +1,7 @@
 .contacts-main {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   gap: 2rem;
   padding: 100px 50px;
   color: white;
@@ -28,4 +28,12 @@
 @media screen and (min-width: 1800px) {
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .contacts-main {
+    flex-direction: column;
+  }
+
+  .contacts-content div {
+    justify-content: center;
+  }
+}

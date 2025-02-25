@@ -29,6 +29,7 @@ export const Contacts = () => {
         <h2>Contacts</h2>
       </div>
       <div className={styles["contacts-content"]}>
+       {copyStatus && <p style={{color: "var(--secondary)", fontSize: "14px", position: "absolute", marginTop: "-30px", marginLeft: "30px"}}>Copied to clipboard!</p>}
         <div>
           <img src={emailIcon} alt="Email" />
           <p onClick={(e) => CopyContact(e.target.textContent)}>nadezhda.rasheva96@gmail.com</p>
@@ -60,7 +61,6 @@ export const Contacts = () => {
           </p>
         </div>
       </div>
-      {copyStatus && <p style={{color: "var(--secondary)", fontSize: "14px"}}>Copied to clipboard!</p>}
     </div>
   );
 };

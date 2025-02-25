@@ -9,7 +9,6 @@ const [showLinks, setShowLinks] = useState(false);
 const [navMobileBg, setNavMobileBg] = useState(false);
 
 const ShowLinks = () => {
-  console.log(showLinks)
   setShowLinks(!showLinks)
 }
 
