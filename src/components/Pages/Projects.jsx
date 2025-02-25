@@ -5,6 +5,7 @@ import breezy from "../../assets/breezy.png";
 import emerald from "../../assets/emerald.png";
 import lla from "../../assets/lla.png";
 import sampleHub from "../../assets/sampleHub.png";
+import nrby from "../../assets/nrby.png";
 
 import { Card } from "../UI/Card";
 import { useRef, useState } from "react";
@@ -50,7 +51,8 @@ export const Projects = () => {
           onClickTitle={() => OpenGitLink("")}  onClickGit={() => OpenGitLink("")}  />
          <Card title="SampleHub" text="(JavaScript, HTML, CSS, C#)" src={sampleHub} onClick={() => OpenLink("https://samplehub.ie/")} 
           onClickTitle={() => OpenGitLink("")}  onClickGit={() => OpenGitLink("")}  />
-        <Card />
+        <Card title="Nrby" text="(JavaScript, HTML, CSS, C#)" src={nrby} onClick={() => OpenLink("https://linkdev.nrby.com/")} 
+          onClickTitle={() => OpenGitLink("")}  onClickGit={() => OpenGitLink("")}  />
       </div>
     </div>
   );
