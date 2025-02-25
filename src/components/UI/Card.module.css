@@ -1,5 +1,5 @@
 .card-main {
-  width: 300px;
+  width: 350px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 .card-image img {
-  width: 300px;
+  width: 350px;
   height: 200px;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;

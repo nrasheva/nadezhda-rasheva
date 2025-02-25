@@ -4,6 +4,7 @@
   align-items: center;
   gap: 2rem;
   padding: 100px 50px;
+  margin-top: 50px;
   border-bottom: 1px solid var(--secondary-transparent);
 }
 
@@ -39,4 +40,8 @@
   }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .projects-main {
+    margin-top: 0;
+  }
+}
