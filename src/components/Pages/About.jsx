@@ -22,23 +22,22 @@ export const About = () => {
       <div className={styles["about-right"]}>
         <h2>About me</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia
-          non pariatur, velit quaerat officia nihil recusandae delectus
-          voluptates in consectetur obcaecati debitis corrupti aliquid saepe
-          consequuntur eveniet sequi minus?
+          An outgoing and positive person, ready to create a great-looking and
+          high-functioning solution for you. Always striving for improvement,
+          I’m open to new knowledge and fresh ideas!
         </p>
         <ul className={styles["about-right-skills"]}>
           <li>
             <span>
-            <img src={languagesIcon} alt="Languages" />
-            <h3>Languages</h3>
+              <img src={languagesIcon} alt="Languages" />
+              <h3>Languages</h3>
             </span>
             <p>English, Spanish, Bulgarian</p>
           </li>
           <li>
-          <span>
-            <img src={skillsIcon} alt="Skills" />
-            <h3>Skills</h3>
+            <span>
+              <img src={skillsIcon} alt="Skills" />
+              <h3>Graphic skills</h3>
             </span>
             <p>Adobe Photoshop, Adobe Illustrator, Figma</p>
           </li>
