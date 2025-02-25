@@ -4,15 +4,18 @@ import { About } from "./components/Pages/About";
 import { Projects } from "./components/Pages/Projects";
 import { Contacts } from "./components/Pages/Contacts";
 import { Footer } from "./components/Navigation/Footer";
+import { useRef } from "react";
 
 function App() {
+  const contactRef = useRef(null);
+
   return (
     <>
   <Navigation />;
-  <Home />
+  <Home contactRef={contactRef} />
   <About />
   <Projects />
-  <Contacts />
+  <Contacts ref={contactRef} />
   <Footer />
   </>
 )

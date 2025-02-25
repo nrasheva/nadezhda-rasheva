@@ -2,10 +2,12 @@ import { MainButton } from "../UI/Button";
 import styles from "./Home.module.css";
 import buttonStyles from "../UI/Button.module.css";
 
-export const Home = () => {
-
+export const Home = ({ contactRef }) => {
+  
   function ContactClick() {
-    alert("Got a project");
+    if (contactRef?.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   function DownloadResume() {

@@ -3,40 +3,57 @@ import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import instaIcon from "../../assets/insta-icon.svg";
 import linkedinIcon from "../../assets/linkedin-icon.svg";
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 
-export const Contacts = () => {
+export const Contacts = forwardRef((props, ref) => {
   const [copyStatus, setCopyStatus] = useState(false);
 
- const OpenMedia = (url) => {
-  window.open(url, "_blank");
- }
+  const OpenMedia = (url) => {
+    window.open(url, "_blank");
+  };
 
- const CopyContact = (text) => {
-  navigator.clipboard.writeText(text)
-  .then(() => {
-    setCopyStatus(true);
-    setTimeout(() => setCopyStatus(false), 2000);
-  })
-  .catch((err) => {
-    console.error("Failed to copy text: ", err);
-  });
-};
+  const CopyContact = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopyStatus(true);
+        setTimeout(() => setCopyStatus(false), 2000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  };
 
   return (
-    <div id="contact" className={styles["contacts-main"]}>
+    <div ref={ref} id="contact" className={styles["contacts-main"]}>
       <div className={styles["contacts-title"]}>
         <h2>Contacts</h2>
       </div>
       <div className={styles["contacts-content"]}>
-       {copyStatus && <p style={{color: "var(--secondary)", fontSize: "14px", position: "absolute", marginTop: "-30px", marginLeft: "30px"}}>Copied to clipboard!</p>}
+        {copyStatus && (
+          <p
+            style={{
+              color: "var(--secondary)",
+              fontSize: "14px",
+              position: "absolute",
+              marginTop: "-30px",
+              marginLeft: "30px",
+            }}
+          >
+            Copied to clipboard!
+          </p>
+        )}
         <div>
           <img src={emailIcon} alt="Email" />
-          <p onClick={(e) => CopyContact(e.target.textContent)}>nadezhda.rasheva96@gmail.com</p>
+          <p onClick={(e) => CopyContact(e.target.textContent)}>
+            nadezhda.rasheva96@gmail.com
+          </p>
         </div>
         <div>
           <img src={phoneIcon} alt="Phone number" />
-          <p onClick={(e) => CopyContact(e.target.textContent)}>+359-88-9948940</p>
+          <p onClick={(e) => CopyContact(e.target.textContent)}>
+            +359-88-9948940
+          </p>
         </div>
         <div>
           <img src={instaIcon} alt="Instagram" />
@@ -63,4 +80,6 @@ export const Contacts = () => {
       </div>
     </div>
   );
-};
+});
+
+Contacts.displayName = "Contacts";
