@@ -47,12 +47,8 @@
 }
 
 .photo-field {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 10px solid var(--secondary);
-  /* box-shadow: var(--secondary-transparent) 0px 10px 50px; */
-  box-shadow: var(--secondary-transparent) 0px 4px 24px;
+  width: 400px;
+  height: 400px;
 }
 
 .home-buttons {

@@ -1,6 +1,7 @@
 import { MainButton } from "../UI/Button";
 import styles from "./Home.module.css";
 import buttonStyles from "../UI/Button.module.css";
+import photo from "../../assets/photo.png";
 
 export const Home = ({ contactRef }) => {
   
@@ -41,7 +42,7 @@ export const Home = ({ contactRef }) => {
           </div>
         </div>
         <div className={styles["home-photo"]}>
-          <div className={styles["photo-field"]}></div>
+          <img className={styles["photo-field"]} src={photo} />
         </div>
       </div>
       <div className={styles["home-line"]}>
