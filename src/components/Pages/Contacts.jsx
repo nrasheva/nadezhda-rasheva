@@ -6,7 +6,7 @@ import linkedinIcon from "../../assets/linkedin-icon.svg";
 import { useState, forwardRef } from "react";
 
 const contacts = [
-  { icon: emailIcon, text: "nadezhda.rasheva96@gmail.com", url: "mailto:nadezhda.rasheva96@gmail.com" },
+  { icon: emailIcon, text: "nadezhda.rasheva96@gmail.com", url: "mailto:{nadezhda.rasheva96@gmail.com}" },
   { icon: phoneIcon, text: "+359-88-9948940", url: "tel:+359889948940" },
   {
     icon: instaIcon,
@@ -30,7 +30,7 @@ export const Contacts = forwardRef((props, ref) => {
         setTimeout(() => setCopyStatus(false), 2000);
       });
     } else if (url) {
-      window.location.href = url;
+      window.open(url, "_blank");
     }
   };
 
