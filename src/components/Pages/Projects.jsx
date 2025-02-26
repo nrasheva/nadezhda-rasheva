@@ -24,7 +24,8 @@ const projects = [
   {
     title: "Breezy",
     tech: "(Angular, JavaScript, HTML, CSS, Node.js, Express, Mongo, Mongoose)",
-    description: "A website where you can check the quality of the air for a selected place. You can check the pollution, the level of pollen, the uv index, etc.",
+    description:
+      "A website where you can check the quality of the air for a selected place. You can check the pollution, the level of pollen, the uv index, etc.",
     src: breezy,
     alt: "breezy",
     liveUrl: "https://breezy-website.onrender.com/#/air-quality",
@@ -34,6 +35,8 @@ const projects = [
   {
     title: "Emerald",
     tech: "(JavaScript, HTML, CSS, C#)",
+    description:
+      "A website which provides graphical statistics ( pie charts, line charts, bubble charts, etc. ) about customers according to different parameters. It also offers a solution to track system plans, territories and devices located at a certain place.",
     src: emerald,
     alt: "emerald",
     liveUrl: "https://emerald.beyonddata.bg/",
@@ -41,6 +44,8 @@ const projects = [
   {
     title: "LLA score",
     tech: "(JavaScript, HTML, CSS, C#)",
+    description:
+      "A customer scoring webpage that evaluates and generates detailed customer profiles based on complex data insights.",
     src: lla,
     alt: "lla",
     liveUrl: "https://llascore.beyonddata.bg/",
@@ -48,6 +53,8 @@ const projects = [
   {
     title: "SampleHub",
     tech: "(JavaScript, HTML, CSS, C#)",
+    description:
+      "A marketing platform that allows companies to partner with restaurants and bars, enabling them to create targeted campaigns for specific products. The system generates unique QR codes that customers can scan at participating locations to redeem the product featured in the campaign.",
     src: sampleHub,
     alt: "sampleHub",
     liveUrl: "https://samplehub.ie/",
@@ -55,6 +62,7 @@ const projects = [
   {
     title: "Nrby",
     tech: "(JavaScript, HTML, CSS, C#)",
+    description: "A website that offers solutions for companies in the electricity, telecom, and other industries to efficiently track and manage their services.",
     src: nrby,
     alt: "nrby",
     liveUrl: "https://linkdev.nrby.com/",
@@ -66,7 +74,8 @@ export const Projects = () => {
   const messageRef = useRef(null);
   const [emptyLink, setEmptyLink] = useState(false);
 
-  const scrollToRef = (ref) => ref.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToRef = (ref) =>
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   const openLink = (url) => window.open(url, "_blank");
   const openGitLink = (url) => {
     if (!url) {
@@ -82,7 +91,12 @@ export const Projects = () => {
     <div id="projects" className={styles["projects-main"]}>
       <div className={styles["projects-title"]}>
         <h2>Projects</h2>
-        <img ref={messageRef} src={arrowIcon} alt="Down" onClick={() => scrollToRef(projectsRef)} />
+        <img
+          ref={messageRef}
+          src={arrowIcon}
+          alt="Down"
+          onClick={() => scrollToRef(projectsRef)}
+        />
       </div>
       {emptyLink && (
         <p style={{ color: "var(--secondary)" }}>
@@ -90,19 +104,30 @@ export const Projects = () => {
         </p>
       )}
       <div ref={projectsRef} className={styles["projects-content"]}>
-        {projects.map(({ title, tech, description, src, alt, liveUrl, repoUrl, apiRepoUrl }) => (
-          <Card
-            key={title}
-            title={title}
-            text={tech}
-            description={description}
-            src={src}
-            alt={alt}
-            onClick={() => openLink(liveUrl)}
-            onClickTitle={() => openGitLink(repoUrl)}
-            onClickGit={() => openGitLink(apiRepoUrl)}
-          />
-        ))}
+        {projects.map(
+          ({
+            title,
+            tech,
+            description,
+            src,
+            alt,
+            liveUrl,
+            repoUrl,
+            apiRepoUrl,
+          }) => (
+            <Card
+              key={title}
+              title={title}
+              text={tech}
+              description={description}
+              src={src}
+              alt={alt}
+              onClick={() => openLink(liveUrl)}
+              onClickTitle={() => openGitLink(repoUrl)}
+              onClickGit={() => openGitLink(apiRepoUrl)}
+            />
+          )
+        )}
       </div>
     </div>
   );
