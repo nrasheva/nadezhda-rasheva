@@ -9,12 +9,14 @@
 .filled-button {
   background-color: var(--secondary);
   border: 3px solid transparent;
-  color: white;
+  color: var(--background);
+  font-weight: bold;
 }
 
 .filled-button:hover {
   background-color: transparent;
   border: 3px solid var(--secondary);
+  color: white;
 }
 
 .border-button {
