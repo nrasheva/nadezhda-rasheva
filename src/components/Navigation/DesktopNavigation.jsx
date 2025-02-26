@@ -19,7 +19,7 @@ export const DesktopNavigation = () =>{
      return (
         <nav className={navBg ? styles.navScrolled : styles["nav-items-desktop"]}>
          <h2 className={styles.logo}>
-           Nadya R<span>.</span>
+           <a href="/#home">Nadya R<span>.</span></a>
          </h2>
          <NavLinks />
        </nav>

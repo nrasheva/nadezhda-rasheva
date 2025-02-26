@@ -21,7 +21,7 @@ export const Home = ({ contactRef }) => {
             <h3>Web developer</h3>
           </div>
           <div className={styles["home-buttons"]}>
-            <MainButton text="Got a project" onClick={handleScrollToContact} className={buttonStyles["filled-button"]} />
+            <MainButton text="Got a project?" onClick={handleScrollToContact} className={buttonStyles["filled-button"]} />
             <MainButton text="My resume" onClick={handleDownloadResume} className={buttonStyles["border-button"]} />
           </div>
         </div>
