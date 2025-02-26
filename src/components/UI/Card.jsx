@@ -15,7 +15,7 @@ export const Card = ({ text, title, description, src, alt, onClick, onClickTitle
           <span>
             <p onClick={onClickTitle}>{title}</p>
             <p>{text}</p>
-            <p style={{fontSize: "12px"}}><span style={{fontWeight: "bold"}}>Description:</span>{description}</p>
+            <p style={{fontSize: "12px", display: "flex", flexDirection: "column", gap: "0.2rem"}}><span style={{fontWeight: "bold"}}>Description:</span>{description}</p>
           </span>
         </div>
         <div className={styles["card-icon"]}>
