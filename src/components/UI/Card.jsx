@@ -2,12 +2,12 @@ import styles from "./Card.module.css";
 import linkIcon from "../../assets/link-icon.svg";
 import gitIcon from "../../assets/git-icon.svg";
 
-export const Card = ({ text, title, description, src, onClick, onClickTitle, onClickGit, className }) => {
+export const Card = ({ text, title, description, src, alt, onClick, onClickTitle, onClickGit, className }) => {
   
   return (
     <div className={`${styles["card-main"]} ${className || ""}`}>
       <div className={styles["card-image"]}>
-        <img src={src} />
+        <img src={src} alt={alt}/>
       </div>
       <div className={styles["card-description"]}>
         <div className={styles["card-text"]}>
