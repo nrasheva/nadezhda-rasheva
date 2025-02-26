@@ -5,7 +5,16 @@ import photo from "../../assets/photo.png";
 
 export const Home = ({ contactRef }) => {
   const handleScrollToContact = () => contactRef?.current?.scrollIntoView({ behavior: "smooth" });
-  const handleDownloadResume = () => alert("Download Resume");
+  
+  const handleDownloadResume = () => {
+    const pdfUrl = "Sample.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "document.pdf"; // specify the filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+  }
 
   return (
     <div id="home" className={styles["home-main"]}>
