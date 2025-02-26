@@ -5,23 +5,33 @@ import instaIcon from "../../assets/insta-icon.svg";
 import linkedinIcon from "../../assets/linkedin-icon.svg";
 import { useState, forwardRef } from "react";
 
+const contacts = [
+  { icon: emailIcon, text: "nadezhda.rasheva96@gmail.com", url: "mailto:nadezhda.rasheva96@gmail.com" },
+  { icon: phoneIcon, text: "+359-88-9948940", url: "tel:+359889948940" },
+  {
+    icon: instaIcon,
+    text: "@nadezhdarasheva",
+    url: "https://www.instagram.com/nadezhdarasheva/",
+  },
+  {
+    icon: linkedinIcon,
+    text: "Nadezhda Rasheva",
+    url: "https://bg.linkedin.com/in/nadezhda-rasheva?trk=people-guest_people_search-card",
+  },
+];
+
 export const Contacts = forwardRef((props, ref) => {
   const [copyStatus, setCopyStatus] = useState(false);
 
-  const OpenMedia = (url) => {
-    window.open(url, "_blank");
-  };
-
-  const CopyContact = (text) => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
+  const handleAction = (text, isCopyable, url) => {
+    if (isCopyable) {
+      navigator.clipboard.writeText(text).then(() => {
         setCopyStatus(true);
         setTimeout(() => setCopyStatus(false), 2000);
-      })
-      .catch((err) => {
-        console.error("Failed to copy text: ", err);
       });
+    } else if (url) {
+      window.location.href = url;
+    }
   };
 
   return (
@@ -43,40 +53,12 @@ export const Contacts = forwardRef((props, ref) => {
             Copied to clipboard!
           </p>
         )}
-        <div>
-          <img src={emailIcon} alt="Email" />
-          <p onClick={(e) => CopyContact(e.target.textContent)}>
-            nadezhda.rasheva96@gmail.com
-          </p>
-        </div>
-        <div>
-          <img src={phoneIcon} alt="Phone number" />
-          <p onClick={(e) => CopyContact(e.target.textContent)}>
-            +359-88-9948940
-          </p>
-        </div>
-        <div>
-          <img src={instaIcon} alt="Instagram" />
-          <p
-            onClick={() =>
-              OpenMedia("https://www.instagram.com/nadezhdarasheva/")
-            }
-          >
-            @nadezhdarasheva
-          </p>
-        </div>
-        <div>
-          <img src={linkedinIcon} alt="LinkedIn" />
-          <p
-            onClick={() =>
-              OpenMedia(
-                "https://bg.linkedin.com/in/nadezhda-rasheva?trk=people-guest_people_search-card"
-              )
-            }
-          >
-            Nadezhda Rasheva
-          </p>
-        </div>
+        {contacts.map(({ icon, text, isCopyable, url }, index) => (
+          <div key={index} onClick={() => handleAction(text, isCopyable, url)}>
+            <img src={icon} alt={text} />
+            <p>{text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
