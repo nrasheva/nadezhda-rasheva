@@ -2,7 +2,7 @@ import styles from "./Card.module.css";
 import linkIcon from "../../assets/link-icon.svg";
 import gitIcon from "../../assets/git-icon.svg";
 
-export const Card = ({ text, title, src, onClick, onClickTitle, onClickGit, className }) => {
+export const Card = ({ text, title, description, src, onClick, onClickTitle, onClickGit, className }) => {
   
   return (
     <div className={`${styles["card-main"]} ${className || ""}`}>
@@ -15,6 +15,7 @@ export const Card = ({ text, title, src, onClick, onClickTitle, onClickGit, clas
           <span>
             <p onClick={onClickTitle}>{title}</p>
             <p>{text}</p>
+            <p style={{fontSize: "12px"}}><span style={{fontWeight: "bold"}}>Description:</span>{description}</p>
           </span>
         </div>
         <div className={styles["card-icon"]}>
