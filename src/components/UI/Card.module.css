@@ -78,6 +78,10 @@
   cursor: pointer;
 }
 
+.card-icon img:hover {
+  filter: brightness(0) saturate(100%) invert(81%) sepia(90%) saturate(6896%) hue-rotate(294deg) brightness(86%) contrast(89%);
+}
+
 @media screen and (min-width: 1800px) {}
 
 @media screen and (max-width: 768px) {
