@@ -1,11 +1,11 @@
 import styles from "./Projects.module.css";
 import arrowIcon from "../../assets/arrow-down.svg";
-import moviemates from "../../assets/moviemates.bmp";
-import breezy from "../../assets/breezy.bmp";
-import emerald from "../../assets/emerald.bmp";
-import lla from "../../assets/lla.bmp";
-import sampleHub from "../../assets/sampleHub.bmp";
-import nrby from "../../assets/nrby.bmp";
+import moviemates from "../../assets/moviemates.png";
+import breezy from "../../assets/breezy.png";
+import emerald from "../../assets/emerald.png";
+import lla from "../../assets/lla.png";
+import sampleHub from "../../assets/sampleHub.png";
+import nrby from "../../assets/nrby.png";
 import { Card } from "../UI/Card";
 import { useRef, useState } from "react";
 
