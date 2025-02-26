@@ -60,12 +60,11 @@
 
 .home-line {
   display: flex;
-  /* gap: 2rem; */
   flex: 1;
   padding: 1rem;
   margin: 0 -50px;
   background-color: var(--lighter-primary);
-  color: var(--lighter-text);
+  color: var(--light-secondary);
 }
 
 .home-line ul {
@@ -79,7 +78,7 @@
 }
 
 .home-line li:hover {
-  color: var(--light-secondary);
+  color: var(--secondary);
 }
 
 
@@ -126,5 +125,9 @@
 
   .home-line ul {
     justify-content: space-between;
+  }
+
+  .photo-field {
+    width: 370px;
   }
 }

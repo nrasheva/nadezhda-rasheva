@@ -43,5 +43,10 @@
 @media screen and (max-width: 768px) {
   .projects-main {
     margin-top: 0;
+    padding: 1rem;
+  }
+
+  .projects-content {
+   padding: 0;
   }
 }
