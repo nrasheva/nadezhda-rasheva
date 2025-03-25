@@ -4,13 +4,13 @@ import buttonStyles from "../UI/Button.module.css";
 import photo from "../../assets/photo.png";
 
 export const Home = ({ contactRef }) => {
-  const handleScrollToContact = () => contactRef?.current?.scrollIntoView({ behavior: "smooth" });
+  const HandleScrollToContact = () => contactRef?.current?.scrollIntoView({ behavior: "smooth" });
   
-  const handleDownloadResume = () => {
-    const pdfUrl = "Sample.pdf";
+  const HandleDownloadResume = () => {
+    const pdfUrl = "nadya-rasheva-resume.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "document.pdf"; // specify the filename
+        link.download = "nadya-rasheva-resume.pdf"; // specify the filename
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -30,8 +30,8 @@ export const Home = ({ contactRef }) => {
             <h3>Web developer</h3>
           </div>
           <div className={styles["home-buttons"]}>
-            <MainButton text="Got a project?" onClick={handleScrollToContact} className={buttonStyles["filled-button"]} />
-            <MainButton text="My resume" onClick={handleDownloadResume} className={buttonStyles["border-button"]} />
+            <MainButton text="Got a project?" onClick={HandleScrollToContact} className={buttonStyles["filled-button"]} />
+            <MainButton text="My resume" onClick={HandleDownloadResume} className={buttonStyles["border-button"]} />
           </div>
         </div>
         <div className={styles["home-photo"]}>
