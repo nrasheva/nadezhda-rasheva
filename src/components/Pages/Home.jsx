@@ -10,7 +10,7 @@ export const Home = ({ contactRef }) => {
     const pdfUrl = "nadya-rasheva-resume.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "nadya-rasheva-resume.pdf"; // specify the filename
+        link.download = "nadya-rasheva-resume.pdf"; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
